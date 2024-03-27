@@ -1,2 +1,23 @@
 @charset "UTF-8";
 
+.bgimg{
+    background-image: url(../../image/coffee-background.jpg);
+    height: 500px;
+}
+
+.bg2{
+    background-repeat: no-repeat;
+}
+
+
+.bg3{
+    background-size: cover;
+    background-position: center;
+}
+
+.bg4{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

@@ -1,1 +1,41 @@
 @charset "UTF-8";
+
+p{
+    width: 500px;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: #fad296;
+    border: solid 5px #8f5a0a;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.bln{
+    /* 突起の基点 */
+    position: relative;
+}
+
+.bln:before{
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    margin-left: -240px;
+    border: solid 20px transparent;
+    border-top: 20px solid  #fad296;
+    /* 突起の背景色部分を上部に表示 */
+    z-index: 2;
+}
+.bln:after{
+    content: "";
+    position: absolute;
+    /* 背景色部分とは位置をずらす */
+    top: 99%;
+    left: 50%;
+    margin-left: -240px;
+    border: solid 20px transparent;
+    border-top: 20px solid  #8f5a0a;
+    /* 突起の枠線色部分を下部に表示 */
+    z-index: 1;
+}

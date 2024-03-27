@@ -1,4 +1,190 @@
 @charset "UTF-8";
 
+
+/* boxを定義 */
+.box1,.box2{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.box1{
+    background-color: #76ff826b;    
+}
+
+.box2{
+    background-color: #331aefd0;
+}
+
+/* フェードイン */
+.fadeIn{
+    animation-name: fadeIn;
+    animation-fill-mode: backwards;
+    animation-duration: 4s;    
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+/* フェードアウト */
+.fadeOut{
+    animation-name: fadeOut;
+    animation-fill-mode: backwards;
+    animation-duration: 4s;    
+    animation-delay: 4s;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+/* 回転 */
+.spin{
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.box2{
+    transition: 0.5s;
+}
+.box2:hover{
+    transition: 0.5s;
+}
+/* Q9-4 ホバー時に色変更 */
+.box2--color:hover{
+    background-color: #ff27e2c9;
+}
+/* Q9-5 ホバー時に回転 */
+.box2--spin{
+    transform: rotate(0);
+}
+
+.box2--spin:hover{
+    transform: rotate(360deg);
+}
+/* Q9-6 ホバー時に上にスライド */
+.box2--slideup{
+    transform: translateY(0);
+}
+.box2--slideup:hover{
+    transform: translateY(-20%);}
+
+/* Q9-7 ホバー時に右にスライド */
+.box2--slideright{
+    transform: translatex(0);
+}
+.box2--slideright:hover{
+    transform: translatex(20%);}
+
+/* Q9-8 ホバー時に縦に引き延ばし */
+.box2--long:hover{
+    height: 300px;
+}
+/* Q9-9 ホバー時に箱を横に引き延ばし */
+.box2--wide:hover{
+    width: 500px;
+}
+/* Q9-10 ホバー時に箱の中に枠線 */
+.box2--inline:hover{
+    box-sizing: border-box;
+    border: 10px #00ffe5 solid;
+}
+/* Q9-11 ホバー時に箱に影をつける */
+.box2--shadow:hover{
+    box-shadow: 8px 11px 10px 3px #06031ed0;
+}
+
+/* 回転するサークル */
+.circle{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-top: solid 10px #14ff4bcd;
+    border-right: solid 10px #ecf1f2;
+    border-bottom: solid 10px #ecf1f2;
+    border-left: solid 10px #ecf1f2;
+}
+
+
+.circle{
+    animation-name: circleSpin;
+    animation-iteration-count: infinite;
+    animation-duration: 1.1s;
+    animation-timing-function: linear;
+}
+
+@keyframes circleSpin{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* カードの設定 */
+.cardList{
+    display: flex;
+}
+/* 写真の配置 */
+.photo{
+    background-image: url(https://picsum.photos/id/1005/200/300);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* １枚のカード */
+.list{
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #000000;
+    margin-left: -1px;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.list p{
+    margin-top: 20px;
+}
+
+/* ホバー時にシャドウがつく */
+.list:hover{
+    z-index: 2;
+    box-shadow: 0px 0px 10px 3px #424242d0;
+    transition: all 0.5s;
+}
 /* カード内の画像は以下のURLを使用して下さい */
 /* https://picsum.photos/id/1005/200/300 */
